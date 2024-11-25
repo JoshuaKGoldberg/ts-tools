@@ -2,7 +2,7 @@
 // Original license: https://github.com/ajafff/tsutils/blob/26b195358ec36d59f00333115aa3ffd9611ca78b/LICENSE
 
 import semver from "semver";
-import ts from "typescript";
+import * as ts from "typescript";
 
 import {
 	isModifierFlagSet,
