@@ -152,6 +152,16 @@ module.exports = {
 			{ argsIgnorePattern: "^_", caughtErrors: "all" },
 		],
 
+		"no-restricted-syntax": [
+			"error",
+			// Forbid default import from "typescript"
+			{
+				message: 'Default import from "typescript" is not allowed.',
+				selector:
+					'ImportDeclaration[source.value="typescript"] > ImportDefaultSpecifier',
+			},
+		],
+
 		// These on-by-default rules don't work well for this repo and we like them off.
 		"n/no-missing-import": "off",
 		"no-case-declarations": "off",
